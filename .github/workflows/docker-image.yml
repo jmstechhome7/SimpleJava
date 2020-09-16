@@ -14,9 +14,10 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Push to GitHub Packages
-        uses: mr-smithers-excellent/docker-build-push@v4
+        uses: docker/build-push-action@v2
         with:
-          image: dockerimages/javapp:v1
-          registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.TOKEN }} 
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: jmstechhome7/SimpleJava/javaapp:v1
+          tag_with_ref: true
