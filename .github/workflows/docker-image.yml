@@ -16,7 +16,7 @@ jobs:
       - name: Push to GitHub Packages
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: github-repo/image-name
+          image: SimpleJava/javapp
           registry: ghcr.io
           githubOrg: override-org # optional
           username: ${{ github.actor }}
