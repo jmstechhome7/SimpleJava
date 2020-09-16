@@ -18,6 +18,5 @@ jobs:
         with:
           image: SimpleJava/javapp
           registry: ghcr.io
-          githubOrg: override-org # optional
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }} 
