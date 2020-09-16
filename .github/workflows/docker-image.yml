@@ -16,7 +16,7 @@ jobs:
       - name: Push to GitHub Packages
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: SimpleJava/javapp
+          image: simplejava/javapp
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }} 
