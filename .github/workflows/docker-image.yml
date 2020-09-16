@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.TOKEN }}
           registry: docker.pkg.github.com
-          repository: jmstechhome/madhu/javaapp
+          repository: SimpleJava/madhu/javaapp
           tag_with_ref: true
