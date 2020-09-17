@@ -13,11 +13,9 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to GitHub Packages
-        uses: docker/build-push-action@v2
-        with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: jmstechhome7/SimpleJava/javaapp:v1
-          tag_with_ref: true
+      - name: Build and Publish head Docker image
+      -  uses: VaultVulp/gp-docker-action@1.1.7
+         with:
+          github-token: ${{ secrets.TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
+          image-name: myjavaapp # Provide Docker image name
+          image-tag: head # Provide Docker image tag
