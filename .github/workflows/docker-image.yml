@@ -14,8 +14,8 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Build and Publish head Docker image
-      -  uses: VaultVulp/gp-docker-action@1.1.7
-         with:
+        uses: VaultVulp/gp-docker-action@1.1.7
+        with:
           github-token: ${{ secrets.TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
           image-name: myjavaapp # Provide Docker image name
           image-tag: head # Provide Docker image tag
